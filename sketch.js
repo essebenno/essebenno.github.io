@@ -8,8 +8,15 @@ function setup() {
 }
 
 function draw() {
-  background(190);
+  background(220);
   fill("springgreen");
   noStroke();
   ellipse(mouseX,mouseY,25);
+  strokeWeight(5)
+  stroke("orangered");
+  line(width/2+100,height/2,width/2-100,height/2);
+  stroke("red");
+  line(width/2+100,height/2+25,width/2-100,height/2+25);
+  stroke("deeppink");
+  line(width/2+100,height/2+50,width/2-100,height/2+50);
 }

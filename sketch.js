@@ -3,13 +3,13 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth,windowsHeight);
+  createCanvas(windowWidth,windowHeight);
   angleMode(DEGREES);
 }
 
 function draw() {
   background(190);
-  color("springgreen");
+  fill("springgreen");
   noStroke();
-  ellipse(mouseX,mouseY,25);// put drawing code here
+  ellipse(mouseX,mouseY,25);
 }

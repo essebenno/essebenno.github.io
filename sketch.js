@@ -2,9 +2,14 @@ function preload(){
   // put preload code here
 }
 
+let circleRadius = 200;
+
 function setup() {
   createCanvas(windowWidth,windowHeight);
   angleMode(DEGREES);
+
+  frameRate(60);
+
 }
 
 function draw() {
@@ -12,11 +17,18 @@ function draw() {
   fill("springgreen");
   noStroke();
   ellipse(mouseX,mouseY,25);
+  ellipse(0,0,25);
+
   strokeWeight(5)
-  stroke("orangered");
-  line(width/2+100,height/2,width/2-100,height/2);
-  stroke("red");
-  line(width/2+100,height/2+25,width/2-100,height/2+25);
   stroke("deeppink");
-  line(width/2+100,height/2+50,width/2-100,height/2+50);
+  noFill();
+  ellipse(width/2,height/2,circleRadius*2);
+
+  translate(width/2, height/2);
+  rotate(frameCount);
+
+  strokeWeight(5)
+  stroke("deeppink");
+  line(0+circleRadius,0, 0-circleRadius,0);
+
 }
